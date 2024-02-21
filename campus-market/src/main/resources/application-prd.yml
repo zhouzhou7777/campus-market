@@ -1,0 +1,23 @@
+spring:
+    datasource:
+        continue-on-error: false
+        driver-class-name: com.mysql.jdbc.Driver
+        initial-size: 5
+        max-active: 50
+        max-wait: 60000
+        min-evictable-idle-time-millis: 1800000
+        min-idle: 5
+        password: orcl
+        test-on-borrow: false
+        test-on-return: false
+        test-while-idle: true
+        time-between-eviction-runs-millis: 300000
+        url: jdbc:mysql://yuan.com:3306/ershou?serverTimezone=GMT%2b8&useUnicode=true&characterEncoding=utf8
+        username: root
+        validation-query: SELECT 1 FROM DUAL
+    jpa:
+        database: MYSQL
+        database-platform: org.hibernate.dialect.MySQL5InnoDBDialect
+        hibernate:
+            ddl-auto: update
+        show-sql: true

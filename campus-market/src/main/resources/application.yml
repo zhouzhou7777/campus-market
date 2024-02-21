@@ -1,0 +1,30 @@
+server:
+    port: 8080
+    servlet:
+        session:
+            timeout: 1800
+spring:
+    freemarker:
+        allow-request-override: false
+        cache: false
+        charset: UTF-8
+        check-template-location: true
+        content-type: text/html
+        expose-request-attributes: false
+        expose-session-attributes: false
+        expose-spring-macro-helpers: false
+        prefix: ''
+        settings:
+            default_encoding: UTF-8
+            number_format: 0.##
+            template_update_delay: 0
+        suffix: .ftl
+        template-loader-path: classpath:/templates/
+    jackson:
+        date-format: yyyy-MM-dd HH:mm:ss
+        time-zone: GMT+8
+    profiles:
+        active: dev
+    servlet:
+        multipart:
+            maxFileSize: 2MB
